@@ -1,5 +1,5 @@
 package salathree.belajar.spring.core.controller;
 
 public class User {
-    private String nama, nim, umur;
+    private String nama;
 }
