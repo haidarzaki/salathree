@@ -1,3 +1,3 @@
 # salathree
 
-# hari ini hari yang bagus untuk belajar
+# hari ini hari yang bagus untuk
