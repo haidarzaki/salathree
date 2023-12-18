@@ -2,35 +2,54 @@ package salathree.belajar.spring.core.models;
 
 import java.time.LocalDateTime;
 
+import java.util.List;
+
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.UuidGenerator;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "User")
 public class User{
+    @Id
+    @GeneratedValue
+    @UuidGenerator
+    private String IDUser;
+
     @Column(name = "username", length = 32)
     private String username;
 
-    @Column(name = "Email", length = 100)
-    private String Email;
+    @Column(name = "email", length = 100)
+    private String email;
 
-    @Column(name = "Password", length = 255)
-    private String Password;
+    @Column(name = "password", length = 255)
+    private String password;
+
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Roles role;
 
     public User(){
 
     }
 
     //Setter & Getter
+    public User(String IDUser, String username, String email, String password){
+        this.IDUser = IDUser;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
 
     public String getUsername(){
         return username;
@@ -41,19 +60,19 @@ public class User{
     }
 
     public String getEmail(){
-        return Email;
+        return email;
     }
 
     public void setEmail(String Email){
-        this.Email = Email;
+        this.email = Email;
     }
 
     public String getPassword(){
-        return Password;
+        return password;
     }
 
     public void setPassword(String Password){
-        this.Password = Password;
+        this.password = Password;
     }
 
 }
