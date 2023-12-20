@@ -1,9 +1,9 @@
 package salathree.belajar.spring.core.models;
 
-import java.time.LocalDateTime;
-import java.util.List;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+//import java.time.LocalDateTime;
+//import java.util.List;
+//import org.hibernate.annotations.CreationTimestamp;
+//import org.hibernate.annotations.UpdateTimestamp;
 
 // import javax for Column
 import jakarta.persistence.Column;
