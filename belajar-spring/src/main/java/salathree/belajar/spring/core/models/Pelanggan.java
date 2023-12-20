@@ -21,10 +21,10 @@ import jakarta.persistence.Table;
 public class Pelanggan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer pelanggan_id;
 
     @ManyToOne
-    @JoinColumn(name = "id_customer")
+    @JoinColumn(name = "pelanggan_id")
     private User Pelanggan; // Rename "customer" to "CustomerAddress"
 
     @Column(length = 64)
@@ -35,20 +35,20 @@ public class Pelanggan {
     private Order order;
 
     public Pelanggan(){}
-    public Pelanggan(int id, int budget, int phone, Order order){
-        this.id = id;
+    public Pelanggan(int pelanggan_id, int budget, int phone, Order order){
+        this.pelanggan_id = pelanggan_id;
         this.budget = budget;
         this.phone = phone;
         this.order = order;
     }
 
 
-    public Integer getId() {
-        return this.id;
+    public Integer getPelanggan_id() {
+        return this.pelanggan_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setPelanggan_id(Integer pelanggan_id) {
+        this.pelanggan_id = pelanggan_id;
     }
 
     public User getPelanggan() {
