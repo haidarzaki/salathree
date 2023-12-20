@@ -1,21 +1,21 @@
 package salathree.belajar.spring.core.models;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 
-import java.util.List;
+//import java.util.List;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+//import org.hibernate.annotations.CreationTimestamp;
+//import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.UuidGenerator;
 
-import jakarta.persistence.CascadeType;
+//import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+//import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -39,9 +39,7 @@ public class User{
     @JoinColumn(name = "role_id")
     private Roles role;
 
-    public User(){
-
-    }
+    public User(){}
 
     //Setter & Getter
     public User(String IDUser, String username, String email, String password){
