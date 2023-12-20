@@ -1,9 +1,9 @@
 package salathree.belajar.spring.core.models;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+//import org.hibernate.annotations.CreationTimestamp;
+//import org.hibernate.annotations.UpdateTimestamp;
 
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
